@@ -1,1 +1,72 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARBERSHOP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BARBERSHOP</div>
+        <nav>
+            <a href="#services">Услуги</a>
+            <a href="#booking">Запись</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Стильные стрижки и бритье</h1>
+        <p>Запишись к лучшим барберам города и получи скидку 10% на первый визит</p>
+        <a href="#booking" class="btn">Записаться</a>
+    </section>
+
+    <section id="services">
+        <h2>Наши услуги</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Мужская Стрижка</h3>
+                <p>80 PLN</p>
+            </div>
+            <div class="card">
+                <h3>Стрижка бороды</h3>
+                <p>50 PLN</p>
+            </div>
+            <div class="card">
+                <h3>Комплекс</h3>
+                <p>110 PLN</p>
+            </div>   
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Записаться на стрижку</h2>
+        <form id="booking-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Номер телефона" required>
+            <button type="submit" class="btn">Отправить заявку</button>
+        </form>
+    </section>
+
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами напрямую или запишитесь через Telegram:</p>
+        <a href="https://t.me/lilsavikk" target="_blank" class="telegram-link">
+            Telegram: @lilsavikk
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 BARBERSHOP. Все права защищены.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
