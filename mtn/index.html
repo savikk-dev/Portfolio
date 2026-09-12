@@ -1,0 +1,127 @@
+TYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNTN - Outdoor Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">MNTN</div>
+        <nav class="nav">
+            <a href="#equipment">Equipment</a>
+            <a href="#about">About us</a>
+            <a href="#blog">Blog</a>
+        </nav>
+        <button type="button" class="account-btn" id="accountBtn">Account</button>
+    </header>
+
+    <section class="hero">
+        <span class="tagline">A Hike Guide</span>
+        <h1>Be Prepared For The Mountains And Beyond!</h1>
+        <a href="#equipment" class="scroll-down">scroll down </a>
+    </section>
+
+    <div class="steps-wrapper">
+        <article class="step-section" id="equipment">
+            <div class="step-content">
+                <span class="step-number">01</span>
+                <span class="tagline">GET STARTED</span>
+                <h2>What level of hiker are you?</h2>
+                <p>Determining your level of hiker is essential for choosing the right trail.</p>
+                <a href="#" class="read-more">read more </a>
+            </div>
+        </article>
+
+        <article class="step-section reverse" id="about">
+            <div class="step-content">
+                <span class="step-number">02</span>
+                <span class="tagline">HIKING ESSENTIALS</span>
+                <h2>Picking the right Hiking Gear!</h2>
+                <p>Get the right equipment before you head out to the mountain.</p>
+                <a href="#" class="read-more">read more </a>
+            </div>
+        </article>
+    </div>
+
+    <footer class="footer" id="blog">
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="logo">MNTN</div>
+                <p>Get out there & discover your next slope, mountain & destination!</p>
+                <p class="copyright">Copyright 2026 MNTN, Inc. Terms & Privacy</p>
+            </div>
+            <div class="footer-nav">
+                <h4>More on The Blog</h4>
+                <ul>
+                    <li><a href="#">About MNTN</a></li>
+                    <li><a href="#">Contributors & Writers</a></li>
+                    <li><a href="#">Write For Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const accountBtn = document.getElementById('accountBtn');
+            if (accountBtn) {
+                accountBtn.onclick = function (e) {
+                    e.preventDefault();
+                    alert('Окно входа: Введите логин и пароль.');
+                };
+            }
+
+            
+            document.querySelectorAll('.read-more').forEach(function (element) {
+                element.onclick = function (e) {
+                    e.preventDefault();
+                    alert('Подробная статья открывается!');
+                };
+            });
+
+            
+            document.querySelectorAll('.footer-nav a').forEach(function (link) {
+                link.onclick = function (e) {
+                    e.preventDefault();
+                    const text = this.innerText.trim();
+
+                    if (text === 'About MNTN') {
+                        alert('О нас: MNTN — твой лучший гид по горным маршрутам.');
+                    } else if (text === 'Contributors & Writers') {
+                        alert('Авторы: Список наших авторов и гидов.');
+
+                        } else if (text === 'Write For Us') {
+                        alert('Написать статью: Отправляйте материалы на info@mntn.com');
+                    } else if (text === 'Contact Us') {
+                        alert('Контакты: Связаться с нами — support@mntn.com');
+                    } else if (text === 'Privacy Policy') {
+                        alert('Политика конфиденциальности: Ваши данные в безопасности.');
+                    } else {
+                        alert('Раздел: ' + text);
+                    }
+                };
+            });
+
+           
+            document.querySelectorAll('.nav a, .scroll-down').forEach(function (link) {
+                link.onclick = function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId && targetId.startsWith('#') && targetId !== '#') {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                };
+            });
+        });
+    </script>
+</body>
+</html>
